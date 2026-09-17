@@ -136,6 +136,7 @@ If you want to run any notebooks locally:
 2. Install dependencies:
 3. Set environment variables (see individual project folders for details)
 4. Open notebooks in Jupyter Lab
+
 Note: Notebooks with PyMYSL and PyMongo connections cannot be replicated by another user.
 
 ---
