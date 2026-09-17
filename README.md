@@ -8,14 +8,11 @@ This repository houses my most notable data projects. All of these projects are 
 |---------|-------------|--------------|-----------------|
 | Spotify_Track_Popularity | Predictive classification model identifying factors driving song popularity across genres | Python, scikit-learn, statsmodels | Classification model + analysis |
 | Soccer_Goalscoring_Database | Relational database (4NF) capturing professional soccer statistics with optimized schema design | SQL, Database Design (4NF) | Normalized relational schema |
-| Star Schema Redesign | Converted relational database to star-schema for easier analysis | SQL, Database Design | Star Schema Database, schema diagram
-|
-| ETL_and_MongoDB_Migration | Extracted, transformed, and loaded a relational database and migrated to NoSQL | Python, PyMySQL, PyMongo, MongoDB | MongoDB implementation 
-|
-| PySpark_Predictive_Modeling | Comparative analysis of decision tree, random forest, and logistic regression | PySpark, ML algorithms | Model comparison + performance metrics 
-| Web_Logs_w_Apache | Web log analysis of search queries using Apache Pig on a Hadoop cluster | MapReduce, Apache Pig, Hadoop Clustering | Pig scripts, terminal screenshots, document report
-|
-| DataStory_Salaries | Data analysis of salary figures for Allegheny County | Python, pandas, matplotlib.pyplot, seaborn | Data Story in Jupyter notebook
+| Star Schema Redesign | Converted relational database to star-schema for easier analysis | SQL, Database Design | Star Schema Database, schema diagram |
+| ETL_and_MongoDB_Migration | Extracted, transformed, and loaded a relational database and migrated to NoSQL | Python, PyMySQL, PyMongo, MongoDB | MongoDB implementation |
+| PySpark_Predictive_Modeling | Comparative analysis of decision tree, random forest, and logistic regression | PySpark, ML algorithms | Model comparison + performance metrics |
+| Web_Logs_w_Apache | Web log analysis of search queries using Apache Pig on a Hadoop cluster | MapReduce, Apache Pig, Hadoop Clustering | Pig scripts, terminal screenshots, document report |
+| DataStory_Salaries | Data analysis of salary figures for Allegheny County | Python, pandas, matplotlib.pyplot, seaborn | Data Story in Jupyter notebook |
 
 ## Project Details
 
