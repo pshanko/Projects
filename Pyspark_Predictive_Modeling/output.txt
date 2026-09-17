@@ -1,0 +1,3 @@
+Random Forest Classification Accuracy:  0.8169
+Logistic Regression Classification Accuracy:  0.8169
+Decision Tree Classification Accuracy:  0.7606

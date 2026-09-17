@@ -1,0 +1,14 @@
+—- Loading the data
+
+queries = LOAD 'logs/web_1og.csv' USING PigStorage(', ')
+	       AS (user_id: chararray, search_query: chararray, browser: chararray, os: chararray, referrer: chararray);
+
+—- Getting the browser and os search counts
+
+searches = FOREACH queries GENERATE browser, os;
+grouped_users = GROUP searches BY (browser, os);
+search_counts = FOREACH grouped_searches GENERATE group.browser as browser, group.os as os, COUNT (searches) AS count;
+sorted_searches= ORDER search_counts BY count DESC;
+
+—- Storing the results
+STORE sorted_users INTO 'logs/output/browser’ USING PigStorage(‘,’);

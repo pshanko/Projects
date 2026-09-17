@@ -1,0 +1,14 @@
+-— Loading the data
+
+queries = LOAD 'logs/web_1og.csv' USING PigStorage(',')
+	       AS (user_id: chararray, search_query: chararray, browser: chararray, os: chararray, referrer: chararray);
+
+-— Getting the referrer search counts
+
+searches = FOREACH queries GENERATE referrer;
+grouped_searches = GROUP searches BY referrer;
+search_counts = FOREACH grouped_searches GENERATE group as referrer, COUNT(searches) AS count;
+sorted_searches = ORDER search_counts BY count DESC;
+
+-— Storing the results
+STORE sorted_searches INTO 'logs/output/referrer’ USING PigStorage(‘,’);

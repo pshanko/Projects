@@ -1,0 +1,14 @@
+-— Loading the data
+
+queries = LOAD 'logs/web_1og.csv' USING PigStorage(',')
+	       AS (user_id: chararray, search_query: chararray, browser: chararray, os: chararray, referrer: chararray);
+
+-— Getting the distinct user counts
+
+users = FOREACH queries GENERATE user_id;
+grouped_users = GROUP users BY user_id;
+user_counts = FOREACH grouped_users GENERATE group as user_id, COUNT(users) AS count;
+sorted_users = ORDER user_counts BY count DESC;
+
+—- Storing the results
+STORE sorted_users INTO 'logs/output/user' USING PigStorage(‘,’);
